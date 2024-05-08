@@ -1,0 +1,79 @@
+@import "mocha.css";
+
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @base;
+  }
+}
+
+.warning,
+.critical,
+.urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+window>box {
+  margin: 4px;
+  background-color: @base;
+}
+
+tooltip {
+  background: @base;
+}
+
+tooltip label {
+  color: @text ;
+}
+
+#clock,
+#mpd,
+#workspaces,
+#language,
+#pulseaudio,
+#backlight,
+#battery {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 10pt;
+  font-weight: bold;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: @lavender;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#tray {
+  font-family: "Noto Sans";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces button {
+  color: @surface2;
+}
+
+#workspaces button.active {
+  color: @lavender;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+#workspaces button:hover {
+  background-color: @lavender;
+  color: @base;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+}

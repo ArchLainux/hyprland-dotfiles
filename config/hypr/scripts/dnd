@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+mako_dnd_status=$(makoctl mode)
+if [ $mako_dnd_status == "do-not-disturb" ]; then
+  makoctl mode -s default && notify-send -i "/usr/share/icons/Papirus-Dark/symbolic/status/notification-symbolic.svg" -t 3000 -u critical "do not disturb mode: off"
+else
+  notify-send -i "/usr/share/icons/Papirus-Dark/symbolic/status/notification-disabled-symbolic.svg" -t 3000 -u critical "do not disturb mode: on" && sleep 3 && makoctl mode -s do-not-disturb
+fi

@@ -1,0 +1,93 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 4,
+    "modules-left": ["clock", "mpd"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["hyprland/language", "pulseaudio", "backlight", "battery", "tray"],
+    
+    "clock": {
+        "format": "{:%Y-%m-%d %I:%M %p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "left",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#b4befe'><b>{}</b></span>",
+                              "days":       "<span color='#89b4fa'><b>{}</b></span>",
+                              "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#94e2d5'><b>{}</b></span>",
+                              "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+                              }
+                    }
+    },
+    
+    "mpd": {
+        "interval": 2,
+        "unknown-tag": "N/A",
+        "format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title}",
+        "format-stopped": "stopped \uf001",
+        "format-disconnected": "disconnected \udb81\udf5b",
+        "tooltip": false,
+        "on-click": "alacritty --class floating -e ncmpcpp",
+        "state-icons": {
+            "playing": "\uf04b ",
+            "paused": "\uf04c "
+        },
+        "consume-icons": {
+            "on": " \uf0c4 "
+        },
+        "random-icons": {
+            "on": " \uf074 "
+        },
+        "repeat-icons": {
+            "on": " \uf01e "
+        },
+        "single-icons": {
+            "on": " \uf01e ¹ "
+        }
+    },
+    
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "hyprland/language": {
+        "format": "{} \udb80\udf0c",
+        "format-en": "EN",
+        "format-ar": "AR"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}   {format_source}",
+        "format-muted": "{volume}% \ueee8   {format_source}",
+        "format-source": "{volume}% \uf130",
+        "format-source-muted": "{volume}% \uf131",
+        "format-icons": {
+            "headphone": "\udb80\udecb",
+            "hands-free": "\udb80\udecb",
+            "headset": "\udb80\udecb",
+            "default": ["\uf026", "\uf027", "\uf028"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["\ue3d5", "\ue3d2", "\ue3d0", "\ue3cf", "\ue3ce", "\ue3cb", "\ue3c9", "\ue3c8", "\ue39b"]
+    },
+    
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% \uf0e7",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "interval": 5
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}

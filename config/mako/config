@@ -1,0 +1,17 @@
+font=Noto Sans 10
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#b4befe
+border-radius=2
+progress-color=over #313244
+icons=1
+icon-path=/usr/share/icons/Papirus-Dark/
+history=0
+default-timeout=3500
+
+[urgency=critical]
+border-color=#ed8796
+default-timeout=0
+
+[mode=do-not-disturb]
+invisible=1
