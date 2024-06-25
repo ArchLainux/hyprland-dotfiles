@@ -33,7 +33,6 @@ libgsf
 libopenraw
 linux-headers
 lldb
-lxappearance
 lxsession-gtk3
 mako
 mpd
@@ -76,7 +75,7 @@ qt6ct
 ristretto
 rofi-lbonn-wayland-only-git
 ruff-lsp
-rust
+rustup
 sddm
 slurp
 thunar
