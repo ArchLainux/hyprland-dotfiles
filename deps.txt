@@ -12,7 +12,7 @@ firefox
 firefox-i18n-ar
 freetype2
 gdb
-gojq
+gojq-bin
 grim
 grml-zsh-config
 gvfs
